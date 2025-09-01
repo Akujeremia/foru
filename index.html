@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Buat kakak alingg</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  />
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      color: white;
+    }
+    .memory-card {
+      transition: all 0.3s ease;
+    }
+    .memory-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+        0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+    .heart-animation {
+      animation: heartbeat 1.5s ease-in-out infinite;
+    }
+    @keyframes heartbeat {
+      0%,
+      100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+    }
+
+    /* Tombol animasi */
+    .animated-button {
+      position: relative;
+      padding: 20px 40px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: white;
+      background: linear-gradient(45deg, #ff6b6b, #ee5a52, #ff5252);
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+      box-shadow: 0 8px 20px rgba(255, 107, 107, 0.4),
+        0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+      transform: translateY(0);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin: 0 auto;
+    }
+    .animated-button::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+      );
+      transition: left 0.5s ease;
+      z-index: 0;
+    }
+    .animated-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 30px rgba(255, 107, 107, 0.6),
+        0 0 0 1px rgba(255, 255, 255, 0.2) inset;
+      background: linear-gradient(45deg, #ff5252, #ff6b6b, #ee5a52);
+    }
+    .animated-button:hover::before {
+      left: 100%;
+    }
+    .animated-button:active {
+      transform: translateY(-1px);
+      box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4),
+        0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+    }
+    .animated-button .icon {
+      transition: transform 0.3s ease;
+      font-size: 1.4rem;
+      z-index: 1;
+    }
+    .animated-button:hover .icon {
+      transform: translateX(5px);
+    }
+    .button-text {
+      position: relative;
+      z-index: 1;
+    }
+    /* Floating animation */
+    @keyframes float {
+      0%,
+      100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+    .floating {
+      animation: float 3s ease-in-out infinite;
+    }
+    /* Ripple effect */
+    .ripple {
+      position: absolute;
+      background: rgba(255, 255, 255, 0.4);
+      border-radius: 50%;
+      transform: scale(0);
+      animation: ripple 0.6s linear;
+      pointer-events: none;
+      z-index: 0;
+    }
+    @keyframes ripple {
+      to {
+        transform: scale(4);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <header class="text-center py-16 px-4">
+    <div class="max-w-4xl mx-auto">
+      <div class="heart-animation text-6xl mb-6">❤️</div>
+      <h1
+        class="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-pink-400 to-yellow-400 bg-clip-text text-transparent"
+      >
+        HALLOWW ALINGG
+      </h1>
+      <p class="text-xl md:text-2xl mb-8 opacity-90">
+        AKUU BIKIN GINII BIKESS AKUU SENENGG MENGENALMUU
+      </p>
+      <div class="w-24 h-1 bg-yellow-400 mx-auto mb-8"></div>
+    </div>
+  </header>
+
+  <!-- Message Section -->
+  <section class="py-12 px-4">
+    <div
+      class="max-w-4xl mx-auto bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-2xl"
+    >
+      <h2 class="text-2xl md:text-3xl font-bold mb-6 text-center">
+        Pesan Khusus Untukmu
+      </h2>
+      <div class="space-y-4 text-lg">
+        <p class="leading-relaxed">
+         Terima kasih sudah mauu dengerinn semuaa critaa akuu yangg yaaa.... banyakk lahhh, hehehh.
+         Jangan pernahh berhenti yappingg yeaaaa. Akuu senengg kokk dengerinn smwa critaa kamuuu
+        </p>
+        <p class="leading-relaxed">
+           Truss eumm, tentang care aku kee kamuu... aku jujur gabisa stopp mikrin kamuu tauuu. Yaa... akuu tauu
+           kalauu kamuu ituu bisaa sendirii, tapii ngga semuaa kamu bisa sendirii tauuu... setiap orankk pastii butuhh orankk lainn jugaa
+           aii redii buatt kamuu mintain tolongg, jadii jangan sungkan sungkan yeaa...
+        </p>
+        <p class="leading-relaxed">
+          Truss eummm, setiapp kamuu capee + marahh samaa akuu. eee jangan berkataa kotorr yaaa... akuu tau pastii ada latar belakang dari 
+          itu semuaaa. wajarr kokk semuaa orangg bisaa marahh, intinyaa kalooo marahh sama akuu bolee (tapi jangan ada kata kata kotorr yaa).
+          Truss abisniii kitaa bakall suibukkk bangettt sama yang namnyaa LSP & TKA (sedihh jirr bisni luluss). jadii buatt kamuu semangatt yeaaa
+          pastiii cuapekk polll poll ann. selainn semangatt kamu jugaa jaga kesehatann okayy darii tidurnyaa, makannya dijagaa yea
+          akuu senengg liat kamuu sehat sehatt ajaa
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Memory Gallery Section -->
+  <section class="py-16 px-4">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+       Heumm jujurr akuu kangenn masa masa inii
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Memory 1 -->
+        <div
+          class="memory-card bg-white/5 backdrop-blur-sm rounded-xl p-4 text-center group"
+        >
+          <div class="overflow-hidden rounded-lg mb-4">
+            <img
+              src="img/marugame.jpeg"
+              alt="Dua sahabat tertawa bersama di taman bunga dengan latar matahari terbenam, memakai kaos matching warna biru"
+              class="w-full h-48 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
+              onerror="this.src='https://placehold.co/400x300?text=Memori+1'"
+            />
+          </div>
+          <h3 class="text-lg font-semibold mb-2">Ini pas makan marugame</h3>
+          <p class="text-sm opacity-80">ini first time kita keluarr truss yappingg, hehhehe</p>
+        </div>
+
+        <!-- Memory 2 -->
+        <div
+          class="memory-card bg-white/5 backdrop-blur-sm rounded-xl p-4 text-center group"
+        >
+          <div class="overflow-hidden rounded-lg mb-4">
+            <img
+              src="img/gkb fest.jpeg"
+              alt="Petualangan hiking di gunung dengan pemandangan lembah hijau, kedua sahabat berfoto selfie dengan latar pemandangan spektakuler"
+              class="w-full h-48 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
+              onerror="this.src='https://placehold.co/400x300?text=Memori+2'"
+            />
+          </div>
+          <h3 class="text-lg font-semibold mb-2">Pas GKB fest?</h3>
+          <p class="text-sm opacity-80">Di sini niattnyaa kitaa carii tegulll malahh ngga adaa jirrr, kamprett</p>
+        </div>
+
+        <!-- Memory 3 -->
+        <div
+          class="memory-card bg-white/5 backdrop-blur-sm rounded-xl p-4 text-center group"
+        >
+          <div class="overflow-hidden rounded-lg mb-4">
+            <img
+              src="img/hari apa yaa.png"
+              alt="Makan malam di restoran cozy dengan lampu temaram, berbagi cerita dan makanan favorit sambil tersenyum bahagia"
+              class="w-full h-48 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
+              onerror="this.src='https://placehold.co/400x300?text=Memori+3'"
+            />
+          </div>
+          <h3 class="text-lg font-semibold mb-2">Inii yang kamu kasih aku kejutann</h3>
+          <p class="text-sm opacity-80">inii fotoo abiss upacara hari apa yaa?? lupaa akuu.truss tiba tiba kamu mengajak ke rpko dan memberi kejutann</p>
+        </div>
+
+        <!-- Memory 4 -->
+        <div
+          class="memory-card bg-white/5 backdrop-blur-sm rounded-xl p-4 text-center group"
+        >
+          <div class="overflow-hidden rounded-lg mb-4">
+            <img
+              src="img/WhatsApp Image 2025-09-01 at 12.53.44.jpeg"
+              alt="Perayaan ulang tahun dengan kue dan balon, kedua sahabat memakai topi party dan meledakkan confetti dengan penuh sukacita"
+              class="w-full h-48 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
+              onerror="this.src='https://placehold.co/400x300?text=Memori+4'"
+            />
+          </div>
+          <h3 class="text-lg font-semibold mb-2">Petrofest</h3>
+          <p class="text-sm opacity-80">Jujurr inii asikkk dann seruu bangett bisaa liatt konserr samaa kamuu dan teman temann</p>
+        </div>
+
+        <!-- Memory 5 -->
+        <div
+          class="memory-card bg-white/5 backdrop-blur-sm rounded-xl p-4 text-center group"
+        >
+          <div class="overflow-hidden rounded-lg mb-4">
+            <img
+              src="img/WhatsApp Image 2025-09-01 at 12.53.45.jpeg"
+              alt="Duduk di pantai menonton sunset, siluet kedua sahabat berbicara dengan latar orange dan ungu langit senja yang dramatis"
+              class="w-full h-48 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
+              onerror="this.src='https://placehold.co/400x300?text=Memori+5'"
+            />
+          </div>
+          <h3 class="text-lg font-semibold mb-2">yaaa, wkwkwk</h3>
+          <p class="text-sm opacity-80">Aku jadi kangen boncengg kamuu, besokk day 1 masuk sekull barengg akuu yeaa</p>
+        </div>
+
+        <!-- Memory 6 -->
+        <div
+          class="memory-card bg-white/5 backdrop-blur-sm rounded-xl p-4 text-center group"
+        >
+          <div class="overflow-hidden rounded-lg mb-4">
+            <img
+              src="img/WhatsApp Image 2025-09-01 at 12.53.46.jpeg"
+              alt="Road trip dengan mobil convertible, kedua sahabat tersenyum dengan angin menerbangkan rambut dan pemandangan gunung di latar belakang"
+              class="w-full h-48 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
+              onerror="this.src='https://placehold.co/400x300?text=Memori+6'"
+            />
+          </div>
+          <h3 class="text-lg font-semibold mb-2"></h3>CUANKIII</h3>
+          <p class="text-sm opacity-80">Disinii akuu senenggg bisaa makann cuankii apalagii samaa kamuu. manaa nihh 
+            yang katanyaa "cuanki dulu baru kamu" cuankinyaa kann udahh berartii sekarangg......</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Animated Button Section with two lines text -->
+  <section class="py-16 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <p class="text-white text-xl md:text-2xl font-semibold mb-2">
+       Makasii yaaa sudahh mauuu liatt darii atas sampee akhir
+      </p>
+      <p class="text-white text-lg md:text-xl opacity-90 mb-6">
+        Akuu adaa samtingg buatt kamuu
+      </p>
+      <button
+        class="animated-button floating"
+        onclick="openCodinganLain(event)"
+        aria-label="Buka codingan lain"
+      >
+        <span class="icon" aria-hidden="true">🚀</span>
+        <span class="button-text">Buatt kamuu</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 px-4 text-center border-t border-white/20">
+    <p class="opacity-80">Sekiann darii akuu heheh</p>
+  </footer>
+
+  <script>
+    function openCodinganLain(event) {
+      window.open("flower/index.html", "_blank");
+
+      // Ripple effect
+      const button = event.currentTarget;
+      const ripple = document.createElement("span");
+      ripple.classList.add("ripple");
+
+      const rect = button.getBoundingClientRect();
+      const size = Math.max(rect.width, rect.height);
+      const x = event.clientX - rect.left - size / 2;
+      const y = event.clientY - rect.top - size / 2;
+
+      ripple.style.width = ripple.style.height = size + "px";
+      ripple.style.left = x + "px";
+      ripple.style.top = y + "px";
+
+      button.appendChild(ripple);
+
+      setTimeout(() => {
+        ripple.remove();
+      }, 600);
+    }
+
+    // Floating animation toggle on hover
+    document.querySelectorAll(".animated-button").forEach((button) => {
+      button.addEventListener("mouseenter", function () {
+        this.classList.remove("floating");
+      });
+
+      button.addEventListener("mouseleave", function () {
+        this.classList.add("floating");
+      });
+    });
+  </script>
+</body>
+</html>
